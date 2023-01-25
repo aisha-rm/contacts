@@ -1,4 +1,4 @@
-# contacts API 
+Contacts API 
 
 Description:
 A REST API that handles HTTP requests to perform CRUD operations on a contacts database.
