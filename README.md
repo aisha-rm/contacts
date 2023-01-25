@@ -1,9 +1,9 @@
-Contacts API 
+#Contacts API 
 
-Description:
+##Description:
 A REST API that handles HTTP requests to perform CRUD operations on a contacts database.
 
-Requirements
+##Requirements
 Programming Language: Java
 Runtime: JDK 11
 Database Engine: MySQL
