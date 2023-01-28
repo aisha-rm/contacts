@@ -39,7 +39,7 @@ public class ContactController {
     @ApiResponse(responseCode = "200", description = "Successful retrieval of contacts", content = @Content(array = @ArraySchema(schema = @Schema(implementation = Contact.class))))
     //means array of json objects is returned of the class specified 
     @GetMapping(value = "/contact/all", produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<List<Contact>> getContacts() {
+    public ResponseEntity<List<Contact>> getAllContacts() {
         List<Contact> contacts = contactService.getContacts();
         return new ResponseEntity<>(contacts, HttpStatus.OK);
     }

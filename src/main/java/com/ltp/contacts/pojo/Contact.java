@@ -19,6 +19,12 @@ public class Contact {
         this.id = UUID.randomUUID().toString();
     } 
 
+    public Contact(String id, String name, String phoneNumber) {
+        this.id = id;
+        this.name = name;
+        this.phoneNumber = phoneNumber;
+    }
+
     public String getName() {
         return this.name;
     }
