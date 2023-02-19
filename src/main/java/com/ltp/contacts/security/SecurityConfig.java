@@ -2,6 +2,7 @@ package com.ltp.contacts.security;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpMethod;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -22,7 +23,11 @@ public class SecurityConfig {
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http
+            .csrf().disable()
             .authorizeRequests()    //check http request is authorized
+            .antMatchers(HttpMethod.DELETE, "/delete/contact/*").hasRole("ADMIN")  // /*repsents and contact  id in the deleteMappin path
+            .antMatchers(HttpMethod.POST).hasAnyRole("ADMIN", "USER")
+            .antMatchers(HttpMethod.GET).permitAll()
             .anyRequest().authenticated()   //any request needs to be authorized
             .and()
             .httpBasic()    //use basic auth

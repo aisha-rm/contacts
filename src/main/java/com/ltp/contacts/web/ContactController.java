@@ -87,7 +87,7 @@ public class ContactController {
         @ApiResponse(responseCode = "404", description = "Contact doesn't exist", content = @Content(schema = @Schema(implementation = ErrorResponse.class))),
         @ApiResponse(responseCode = "204", description = "Successfully deleted contact", content = @Content(schema = @Schema(implementation = Contact.class))),
     })
-    @DeleteMapping("/contact/{id}")
+    @DeleteMapping("/delete/contact/{id}")
     public ResponseEntity<HttpStatus> deleteContact(@PathVariable String id) {
         contactService.deleteContact(id);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
