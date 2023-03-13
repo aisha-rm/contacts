@@ -2,7 +2,7 @@
 
 ## Description:
 
-A REST API that handles HTTP requests to perform CRUD operations on a contacts database.
+A REST API Java Application for a contacts mangement system. It handles HTTP requests to perform CRUD operations on a contacts database.
 
 ## Requirements
 
