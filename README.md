@@ -10,7 +10,7 @@ A REST API Java Application for a contacts mangement system. It handles HTTP req
 - Runtime: JDK 11 
 
 
-##Running this project
+## Running this project
 - Clone this repo 
 - In a terminal window, navigate to this project's root folder
 - run '.\mvnw spring-boot:run'
